@@ -52,9 +52,9 @@ typedef struct s_colectibles
 }				t_colectibles;
 
 typedef struct s_game_data {
-    int				tab;
+	int				tab;
 	int				i;
-    t_map			*map;
+	t_map			*map;
 	t_data			*data;
 	t_colectibles	*colectibles;
 }	t_game_data;
@@ -77,7 +77,7 @@ void			map_draw(t_data *data, t_map *map, t_game_data *game_data);
 void			coins_info(t_game_data *game_data);
 void			move_counter(t_game_data *game_data);
 void			game_completed(t_game_data	*game_data);
-void 			free_allocated_memory(t_data *data);
+void			free_allocated_memory(t_data *data);
 void			*ft_calloc(size_t count, size_t size);
 char			*ft_itoa(int n);
 

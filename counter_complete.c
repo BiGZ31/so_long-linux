@@ -19,21 +19,21 @@ void	move_counter(t_game_data *game_data)
 	game_data->data->movement++;
 	test = ft_itoa(game_data->data->movement);
 	game_data->map->y = game_data->map->sprites_size * game_data->data->row + 4;
-	game_data->map->x = 165, 
+	game_data->map->x = 165;
 	draw_filled_square(game_data->map, 0x000000);
 	mlx_string_put(game_data->map->mlx_ptr, game_data->map->win_ptr,
-		165, game_data->map->sprites_size * game_data->data->row + game_data->map->sprites_size / 2, 0xFFFFFF,
+		165, game_data->map->sprites_size * game_data->data->row
+		+ game_data->map->sprites_size / 2, 0xFFFFFF,
 		test);
 	free(test);
 }
 
-
-void free_allocated_memory(t_data *data) 
+void	free_allocated_memory(t_data *data)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (i < data->c) 
+	while (i < data->c)
 	{
 		free(data->str[i]);
 		i++;

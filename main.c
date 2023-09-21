@@ -74,7 +74,8 @@ void	main2(t_data *data, t_map *map, t_game_data *game_data)
 	map_draw(data, map, game_data);
 	mlx_loop_hook(map->mlx_ptr, anim, &game_data);
 	mlx_string_put(map->mlx_ptr, map->win_ptr, 0,
-		map->sprites_size * data->row + map->sprites_size / 2, 0xFFFFFF, "Mouvement Count: ");
+		map->sprites_size * data->row + map->sprites_size
+		/ 2, 0xFFFFFF, "Mouvement Count: ");
 	data->movement = 0;
 	mlx_key_hook(map->win_ptr, player_movement, &game_data);
 	mlx_loop(map->mlx_ptr);
@@ -83,12 +84,12 @@ void	main2(t_data *data, t_map *map, t_game_data *game_data)
 
 int	main(int ac, char **av)
 {
+	t_data		*data;
+	t_map		*map;
+	t_game_data	game_data;
+
 	if (ac == 2)
 	{
-		t_data	*data;
-		t_map	*map;
-		t_game_data	game_data;
-
 		data = NULL;
 		data = (t_data *) ft_calloc(sizeof(t_data), 1);
 		map = (t_map *) malloc(sizeof(t_map));

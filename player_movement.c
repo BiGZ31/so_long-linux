@@ -12,7 +12,7 @@
 
 #include "so_long.h"
 
-void update_coins_info(t_game_data *game_data)
+void	update_coins_info(t_game_data *game_data)
 {
 	game_data->colectibles->copy = game_data->colectibles->amount;
 	coins_info(game_data);
@@ -20,13 +20,13 @@ void update_coins_info(t_game_data *game_data)
 		game_data->colectibles->binarie = 0;
 }
 
-void find_player_position(t_game_data *game_data)
+void	find_player_position(t_game_data *game_data)
 {
 	game_data->tab = 0;
 	while (game_data->data->str[game_data->tab])
 	{
 		game_data->i = 0;
-		while (game_data->data->str[game_data->tab][game_data->i]) 
+		while (game_data->data->str[game_data->tab][game_data->i])
 		{
 			if (game_data->data->str[game_data->tab][game_data->i] == 'P')
 				return ;
@@ -40,7 +40,6 @@ int	player_movement(int keycode, t_game_data *game_data)
 {
 	update_coins_info(game_data);
 	find_player_position(game_data);
-
 	if (keycode == 65307)
 		game_completed(game_data);
 	else if (keycode == 100)
@@ -51,6 +50,5 @@ int	player_movement(int keycode, t_game_data *game_data)
 		a(game_data);
 	else if (keycode == 115)
 		s(game_data);
-	//free(game_data->data->test);
 	return (0);
 }

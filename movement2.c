@@ -38,7 +38,8 @@ int	s(t_game_data *game_data)
 	{
 		if (game_data->colectibles->amount == 0)
 		{
-			printf("You completed this level with %d mooves !\n", game_data->data->movement);
+			printf("You completed this level with %d mooves !\n",
+				game_data->data->movement);
 			game_completed(game_data);
 		}
 		else if (game_data->colectibles->amount != 0)
@@ -75,7 +76,8 @@ int	w(t_game_data *game_data)
 	{
 		if (game_data->colectibles->amount == 0)
 		{
-			printf("You completed this level with %d mooves !\n", game_data->data->movement);
+			printf("You completed this level with %d mooves !\n",
+				game_data->data->movement);
 			game_completed(game_data);
 		}
 		else if (game_data->colectibles->amount != 0)

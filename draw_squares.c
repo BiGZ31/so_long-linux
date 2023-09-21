@@ -14,9 +14,9 @@
 
 void	draw_filled_square(t_map *map, int color)
 {
-    int	x_end;
-    int	y_end;
-    int	i;
+	int	x_end;
+	int	y_end;
+	int	i;
 	int	j;
 
 	i = map->x;

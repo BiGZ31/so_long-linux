@@ -42,7 +42,8 @@ void	display_coins_message(t_game_data *game_data)
 			game_data->colectibles->binarie = 1;
 			return ;
 		}
-		printf("There is %d coins left, You need to collect them\n", game_data->colectibles->amount);
+		printf("There is %d coins left, You need to collect them\n",
+			game_data->colectibles->amount);
 		game_data->colectibles->binarie = 1;
 	}
 }
